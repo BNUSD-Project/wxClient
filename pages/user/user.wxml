@@ -9,7 +9,6 @@
       <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}"></image>
       <view class="userinfo-nickname">{{userInfo.nickName}}</view>
   </view>
-
   <view class="page-body">
     <view class="user-list">
       <block wx:if="{{hasUserInfo === false}}">
@@ -21,7 +20,6 @@
           <view class="navigator-arrow"></view>
         </view>
         -->
-        
         <navigator url="../login/login" class="navigator">
           <view class="navigator-text">账号登录</view>
           <view class="navigator-arrow"></view>
@@ -31,9 +29,7 @@
           <view class="navigator-text">账号注册</view>
           <view class="navigator-arrow"></view>
         </navigator>
-      
       </block>
-      
       <block wx:if="{{hasUserInfo === true}}">
         <navigator url="../self_thread/self_thread" class="navigator">
           <view class="navigator-text">我的订单</view>

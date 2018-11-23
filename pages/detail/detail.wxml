@@ -10,7 +10,6 @@
   <loading hidden="{{loading_hidden}}">
     {{loading_msg}}
   </loading>
- 
   <view class="page-body">
     <view class="page__bd">
       <view class="thread_title-cell">
@@ -63,8 +62,6 @@
             <view>楼主</view>
           </view>
         </view>
-
-        
         <template is="wxParse" data="{{wxParseData:thread_data.message.nodes}}"/>
         <!-- <text>
           {{thread_data.message}}
