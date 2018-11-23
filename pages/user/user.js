@@ -9,7 +9,7 @@ Page({
   data: {
     hasUserInfo: false,
     userInfo: {
-      avatarUrl: "../../resources/image/user_icon.png",
+      avatarUrl: "../../resources/image/user_icon.svg",
       nickName: "游客"
     },
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
@@ -41,7 +41,7 @@ Page({
           that.setData({
             hasUserInfo: false,
             userInfo: {
-              avatarUrl: "../../resources/image/user_icon.png",
+              avatarUrl: "../../resources/image/user_icon.svg",
               nickName: "游客"
             }
           })

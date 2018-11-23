@@ -5,7 +5,7 @@
             <block wx:for-items="{{group_list}}" wx:key="">
                 <view id="{{item.fid}}" class="forum-cells-group" bindtap='clickGroup'>
                     <view>{{item.name}}</view>
-                    <image class="{{item.open ? 'arrow-trans' : ''}}" src='/resources/image/arrowright.png'></image>
+                    <image class="{{item.open ? 'arrow-trans' : ''}}" src='/resources/image/arrowright.svg'></image>
                 </view>
                 <view class="forum-cells {{item.open ? 'forum-list_show' : 'forum-list_hide'}}">
                     <block wx:for-items="{{item.sub_group}}" wx:for-item="sub_group" wx:key="">

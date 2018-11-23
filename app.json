@@ -38,8 +38,8 @@
       {
         "pagePath": "pages/add_article/add_article",
         "text": "发表",
-        "iconPath": "resources/image/kind_gray.png",
-        "selectedIconPath": "resources/image/kind.png"
+        "iconPath": "resources/image/publish_gray.png",
+        "selectedIconPath": "resources/image/publish.png"
       },
       {
         "pagePath": "pages/user/user",

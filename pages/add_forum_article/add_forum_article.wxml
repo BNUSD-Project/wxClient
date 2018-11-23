@@ -41,7 +41,7 @@
                   <view class="weui-uploader__file">
                     <view  class="image-cell">
                       <view bindtap="delImg" data-index="{{index}}">
-                        <image class='del-img-btn' src="../../resources/image/del-img.png"/>
+                        <image class='del-img-btn' src="../../resources/image/del-img.svg"/>
                       </view>
                     <image class="weui-uploader__img" src="{{image}}" data-src="{{image}}" bindtap="previewImage"></image>
                     </view>

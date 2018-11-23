@@ -4,7 +4,7 @@ Page({
 
   /**
    * 页面的初始数据
-   */
+   */ 
   data: {
     countIndex: 8,
     count: [1, 2, 3, 4, 5, 6, 7, 8, 9],
@@ -120,6 +120,8 @@ Page({
   },
   
   inputContent: function(e) {
+    console.log('content:'),
+    console.log(e),
     this.setData({
       articleContent: e.detail.value
     });
@@ -152,6 +154,7 @@ Page({
         aid_list: that.data.aidList,
       },
       success: function(resp) {
+        console.log('massages:');
         console.log(resp);
         var resp_dict = resp.data;
         if (resp_dict.err_code == 10001) {

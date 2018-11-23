@@ -2,7 +2,7 @@
   width: 300rpx;
   height:300rpx;
 }
-
+ 
 .image-logo {
   padding:40rpx 0 0 0;
 }
@@ -20,4 +20,21 @@
 	height:1px;
 	border-top:1rpx solid #efefef;
 	color:#efefef;
+}
+
+.del-img-btn {
+	z-index:100; 
+	position:absolute;
+	display: inline;
+	right: -10rpx;  
+  top: -10rpx; 
+	width:40rpx;
+	height:40rpx;
+	border-radius: 20rpx;
+	opacity: 0.9;
+}
+
+.image-cell {
+	position:relative;
+	margin-top: 15rpx;
 }

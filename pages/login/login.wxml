@@ -2,7 +2,7 @@
 <view class="container">
   	<view class="page-body">
       <view class="page-head image-logo">
-        <image src='../../resources/logo/mouldbbs300.png'></image>
+        <image src='../../resources/logo/mouldbbs300.svg'></image>
       </view>
   		<view class="weui-cells cells-no-border">
   			<view class="weui-cell weui-cell_input">
@@ -22,7 +22,7 @@
 	            <input class="weui-input" type="password" placeholder="请输入密码" bindinput="inputPassword"></input>
 	          </view>
 	        </view>
-	  		
+      
 		</view>
 
 		<view class="btn-area">

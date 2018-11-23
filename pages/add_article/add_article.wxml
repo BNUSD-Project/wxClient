@@ -44,7 +44,7 @@
                 <!-- <view class="weui-textarea-counter">0/200</view> -->
             </view>
         </view>
-
+ 
       <view class="weui-cell">
         <view class="weui-cell__bd">
           <view class="weui-uploader">
@@ -59,7 +59,7 @@
 
                     <view  class="image-cell">
                       <view bindtap="delImg" data-index="{{index}}">
-                        <image class='del-img-btn' src="../../resources/image/del-img.png"/>
+                        <image class='del-img-btn' src="../../resources/image/del-img.svg"/>
                       </view>
                     <image class="weui-uploader__img" src="{{image}}" data-src="{{image}}" bindtap="previewImage"></image>
                     </view>

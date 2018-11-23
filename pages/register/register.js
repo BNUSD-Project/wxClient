@@ -1,4 +1,6 @@
 // pages/login/login.js
+var app = getApp()
+
 Page({
 
   /**
@@ -8,6 +10,8 @@ Page({
     username: '',
     password: '',
     email: '',
+    imagePath: '',
+    isShow: true,
   },
 
   inputUsername: function(e) {
@@ -28,6 +32,54 @@ Page({
     });
   },
   
+  chooseImage: function (){
+    var that = this;
+    wx.chooseImage({
+      count: 2,
+      sizeType: ['original', 'compressed'],
+      sourceType: ['album', 'camera'],
+      success: function(res) {
+        var tempFilePaths = res.tempFilePaths;
+        console.log(res)
+        that.setData({
+          imagePath: tempFilePaths,
+        })
+      },
+    })
+
+  },
+/*
+  previewImage: function (e) {
+    var current = e.target.dataset.src
+    wx.previewImage({
+      current: current,
+      urls: this.data.imageList
+    })
+  },
+*/
+  delImg: function (e) {
+    
+  },
+
+  up_image: function(){
+    var that = this;
+    wx.uploadFile({
+      url: getApp().globalData.svr_url + "up_image.php",
+      filePath: that.data.imagePath[0],
+      name: 'file',
+      formData: {
+        'user': 'test'
+      },
+      success: function(res) {
+        var data = res.data;
+        console.log(data);
+      },
+      fail: function(error) {
+        console.log(error);
+      }
+    })
+  },
+
   clickRegister: function(e) {
     var that = this;
 
@@ -48,7 +100,14 @@ Page({
       getApp().showErrModal('学号不能为空');
       return;
     }
-
+/*
+    var imageList = that.data.imageList;
+    if (Object.keys(imageList).length == 0){
+      getApp().showErrModal('请上传图片');
+      return;
+    }
+    */
+    //up_image;
     wx.request({
       url: getApp().globalData.svr_url + "register.php",
       method: "post",
@@ -57,7 +116,7 @@ Page({
         token: wx.getStorageSync("token"),
         username: that.data.username,
         password: that.data.password,
-        email: that.data.email+'@mail.bnu.edu.cn'
+        email: that.data.email+'@mail.bnu.edu.cn',
       },
       success: function (resp) {
         console.log(resp);
